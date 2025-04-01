@@ -32,8 +32,16 @@ on Windows:
 .venv\Scripts\activate
 ```
 
-### 3. Sync Dependencies
-Install the required dependencies listed in pyproject.toml:
+### 3. Sync Dependencies & playwright
+1. Install the required dependencies listed in pyproject.toml like boto3 and browser-use
+```shell
+uv sync
+```
+
+2. Install Playwright to facilitate browser interactions:​
+```shell
+playwright install
+```
 
 This will ensure all dependencies are installed and up to date.
 
@@ -53,6 +61,7 @@ This will ensure all dependencies are installed and up to date.
     - Default output format (e.g., `json`)
 
 3. Follow the guide to use the created AWS profile.
+4. Important: Ensure that your AWS IAM roles and policies grant the necessary permissions to access Amazon Bedrock services.
 
 
 ### 5. Run the Application
